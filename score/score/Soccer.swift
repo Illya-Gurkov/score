@@ -14,4 +14,23 @@ struct soccer {
     
     let feedbacks: [Feedback] = []
 
+    
+    var ratingBar: String {
+        if let rating = rating {
+            return String(repeating: "⭐️", count: Int(rating.rounded(.up)))
+        } else {
+            return "There are no reviews yet"
+        }
+    }
+    private var rating: Double? {
+        if feedbacks.isEmpty {
+            return nil
+        } else {
+            var sum: Double = 0
+            for rewiew in feedbacks {
+                sum += rewiew.mark
+            }
+            return sum / Double (feedbacks.count)
+        }
+    }
 }

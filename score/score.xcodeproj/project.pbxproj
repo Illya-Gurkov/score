@@ -16,6 +16,7 @@
 		57E0FDE428B50C0100E407A6 /* SoccerTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E0FDE328B50C0100E407A6 /* SoccerTVC.swift */; };
 		57E0FDE728B50C6400E407A6 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E0FDE628B50C6400E407A6 /* DataService.swift */; };
 		57E0FDE928B50E3500E407A6 /* Soccer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E0FDE828B50E3500E407A6 /* Soccer.swift */; };
+		57E0FDED28B53E8A00E407A6 /* DetaliEqipmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E0FDEC28B53E8A00E407A6 /* DetaliEqipmentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		57E0FDE328B50C0100E407A6 /* SoccerTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoccerTVC.swift; sourceTree = "<group>"; };
 		57E0FDE628B50C6400E407A6 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		57E0FDE828B50E3500E407A6 /* Soccer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Soccer.swift; sourceTree = "<group>"; };
+		57E0FDEC28B53E8A00E407A6 /* DetaliEqipmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetaliEqipmentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +96,7 @@
 		57E0FDDB28B4F72E00E407A6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				57E0FDE328B50C0100E407A6 /* SoccerTVC.swift */,
+				57E0FDEA28B53DF200E407A6 /* Eqipment */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -114,6 +116,23 @@
 				57E0FDE628B50C6400E407A6 /* DataService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		57E0FDEA28B53DF200E407A6 /* Eqipment */ = {
+			isa = PBXGroup;
+			children = (
+				57E0FDE328B50C0100E407A6 /* SoccerTVC.swift */,
+				57E0FDEB28B53E3400E407A6 /* Detali Eqipment */,
+			);
+			path = Eqipment;
+			sourceTree = "<group>";
+		};
+		57E0FDEB28B53E3400E407A6 /* Detali Eqipment */ = {
+			isa = PBXGroup;
+			children = (
+				57E0FDEC28B53E8A00E407A6 /* DetaliEqipmentViewController.swift */,
+			);
+			path = "Detali Eqipment";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57E0FDED28B53E8A00E407A6 /* DetaliEqipmentViewController.swift in Sources */,
 				57E0FD9C28B4D8EA00E407A6 /* AppDelegate.swift in Sources */,
 				57E0FD9E28B4D8EA00E407A6 /* SceneDelegate.swift in Sources */,
 				57E0FDE728B50C6400E407A6 /* DataService.swift in Sources */,
