@@ -11,10 +11,9 @@ struct soccer {
     let name: String
     let price: Double
     let image: UIImage?
-    
-    let feedbacks: [Feedback] = []
 
-    
+    var feedbacks: [Feedback] = []
+
     var ratingBar: String {
         if let rating = rating {
             return String(repeating: "⭐️", count: Int(rating.rounded(.up)))
@@ -22,6 +21,7 @@ struct soccer {
             return "There are no reviews yet"
         }
     }
+
     private var rating: Double? {
         if feedbacks.isEmpty {
             return nil
@@ -30,7 +30,7 @@ struct soccer {
             for rewiew in feedbacks {
                 sum += rewiew.mark
             }
-            return sum / Double (feedbacks.count)
+            return sum / Double(feedbacks.count)
         }
     }
 }

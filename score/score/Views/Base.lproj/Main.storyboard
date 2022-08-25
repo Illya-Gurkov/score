@@ -30,7 +30,7 @@
                                             <rect key="frame" x="79" y="7.0000000000000009" width="25" height="14.333333333333334"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" red="0.2272376552" green="0.22140948690000001" blue="0.86078917980000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zau-RN-I8Q">
@@ -110,11 +110,17 @@
                                                 <rect key="frame" x="0.0" y="589.33333333333337" width="340" height="16.333333333333371"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Посмотреть (0) отзывов"/>
+                                                <connections>
+                                                    <segue destination="sHA-c0-yrz" kind="show" id="pn8-q1-ka1"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zgd-VJ-Ja4">
                                                 <rect key="frame" x="0.0" y="655.66666666666663" width="340" height="16.333333333333371"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Оставить отзыв и рейтинг"/>
+                                                <connections>
+                                                    <segue destination="oaR-SV-59I" kind="show" id="eld-5u-htP"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -150,6 +156,115 @@
             </objects>
             <point key="canvasLocation" x="524.63768115942037" y="858.48214285714278"/>
         </scene>
+        <!--Reviews TableVC-->
+        <scene sceneID="2jy-th-Tdz">
+            <objects>
+                <tableViewController id="sHA-c0-yrz" customClass="ReviewsTableVC" customModule="score" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="N5T-fu-Gcj">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="DwP-9r-7Qg">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DwP-9r-7Qg" id="9sq-tj-sdz">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="sHA-c0-yrz" id="jiN-h8-LVt"/>
+                            <outlet property="delegate" destination="sHA-c0-yrz" id="vWl-HH-sKS"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="2Go-Ht-xNX"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0HV-Uu-FEl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1223" y="617"/>
+        </scene>
+        <!--FeedbackVC-->
+        <scene sceneID="YVR-Gq-pSV">
+            <objects>
+                <viewController id="oaR-SV-59I" customClass="FeedbackVC" customModule="score" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Dx-8N-0xT">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The review must contain more than 20 characters" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0Y-nT-sai">
+                                <rect key="frame" x="30" y="531.66666666666663" width="280.66666666666669" height="14.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="OsA-ta-zud">
+                                <rect key="frame" x="41" y="113" width="308" height="672"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваш отзыв" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opU-TP-D7s">
+                                        <rect key="frame" x="111.66666666666666" y="0.0" width="84.666666666666657" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Hps-TH-2ub">
+                                        <rect key="frame" x="0.0" y="120.33333333333334" width="308" height="289.66666666666663"/>
+                                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="308" id="0VI-kI-Te7"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="OWO-La-2zP">
+                                        <rect key="frame" x="12" y="510" width="284" height="32"/>
+                                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                        <segments>
+                                            <segment title="⭐️"/>
+                                            <segment title="⭐️⭐️"/>
+                                            <segment title="⭐️(3)"/>
+                                            <segment title="⭐️(4)"/>
+                                            <segment title="⭐️(5)"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8wK-sI-yH7">
+                                        <rect key="frame" x="84.333333333333329" y="641" width="139.33333333333337" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Сохранить отзыв"/>
+                                        <connections>
+                                            <action selector="saveFB" destination="oaR-SV-59I" eventType="touchUpInside" id="fx7-jp-tpg"/>
+                                            <segue destination="HCT-8b-pul" kind="unwind" unwindAction="unwindToSoccerTVC:" id="Tbo-62-dtf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4T5-yF-YzH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="h0Y-nT-sai" firstAttribute="leading" secondItem="4T5-yF-YzH" secondAttribute="leading" constant="30" id="90F-sS-wis"/>
+                            <constraint firstItem="h0Y-nT-sai" firstAttribute="top" secondItem="Hps-TH-2ub" secondAttribute="bottom" constant="8.6666666666666856" id="Efc-Nt-TUL"/>
+                            <constraint firstItem="OsA-ta-zud" firstAttribute="leading" secondItem="1Dx-8N-0xT" secondAttribute="leadingMargin" constant="25" id="PaJ-Np-Iyj"/>
+                            <constraint firstItem="4T5-yF-YzH" firstAttribute="bottom" secondItem="OsA-ta-zud" secondAttribute="bottom" constant="25" id="cJk-5k-hLp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OsA-ta-zud" secondAttribute="trailing" constant="25" id="n1m-GP-EtT"/>
+                            <constraint firstItem="OsA-ta-zud" firstAttribute="top" secondItem="4T5-yF-YzH" secondAttribute="top" constant="25" id="xUk-gb-8iM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Mpp-bx-lFb"/>
+                    <connections>
+                        <outlet property="errorLBL" destination="h0Y-nT-sai" id="0nK-vp-SKK"/>
+                        <outlet property="ratingSegment" destination="OWO-La-2zP" id="vee-y9-irN"/>
+                        <outlet property="saveBtn" destination="8wK-sI-yH7" id="itZ-Od-jcZ"/>
+                        <outlet property="textView" destination="Hps-TH-2ub" id="tT9-pq-2Sc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1tt-Gn-e92" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="HCT-8b-pul" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1304.6153846153845" y="1305.9241706161138"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="NPt-I3-apP">
             <objects>
@@ -169,8 +284,17 @@
     </scenes>
     <resources>
         <image name="Unknown" width="225" height="225"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
